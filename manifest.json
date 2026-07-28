@@ -1,0 +1,9 @@
+{
+  "name": "Além dos Dias Difíceis",
+  "short_name": "Dias Difíceis",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#151322",
+  "theme_color": "#211d35",
+  "icons": []
+}

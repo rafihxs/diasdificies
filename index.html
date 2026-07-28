@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#211d35">
+  <title>Além dos Dias Difíceis — Para Gaby</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <canvas id="game" width="960" height="540" aria-label="Jogo Além dos Dias Difíceis"></canvas>
+
+    <section id="title-screen" class="overlay active">
+      <div class="panel hero">
+        <div class="cat-icon">🐈</div>
+        <h1>Além dos Dias Difíceis</h1>
+        <p>Uma história criada por <strong>Rafihx</strong> para <strong>Gaby</strong> ❤️</p>
+        <button id="continue-btn" class="primary hidden">Continuar</button>
+        <button id="new-btn" class="primary">Começar a jornada</button>
+        <button id="how-btn">Como jogar</button>
+        <p class="small">Duração aproximada: 35–45 minutos</p>
+      </div>
+    </section>
+
+    <section id="how-screen" class="overlay">
+      <div class="panel">
+        <h2>Como jogar</h2>
+        <p><strong>Computador:</strong> WASD ou setas para andar, Espaço/Enter para interagir.</p>
+        <p><strong>Celular:</strong> use o direcional e o botão de interação.</p>
+        <p>Explore com calma. Converse, ajude pessoas, encontre flores e acompanhe Rafi.</p>
+        <button id="how-close" class="primary">Entendi</button>
+      </div>
+    </section>
+
+    <section id="dialogue" class="dialogue hidden" aria-live="polite">
+      <div id="portrait" class="portrait">🐈</div>
+      <div>
+        <strong id="speaker">Rafi</strong>
+        <p id="dialogue-text"></p>
+        <div id="choices"></div>
+        <span class="continue">Toque ou pressione Espaço</span>
+      </div>
+    </section>
+
+    <section id="hud" class="hud hidden">
+      <div><strong id="chapter-label">Capítulo 1</strong><br><span id="objective">Explore o quarto.</span></div>
+      <div class="collectibles">🌸 <span id="flowers">0</span>/8 &nbsp; ⭐ <span id="stars">0</span>/6</div>
+    </section>
+
+    <section id="minigame" class="overlay">
+      <div class="panel minigame-panel">
+        <h2 id="minigame-title">Minijogo</h2>
+        <p id="minigame-help"></p>
+        <div id="minigame-area"></div>
+        <button id="minigame-close" class="primary hidden">Continuar</button>
+      </div>
+    </section>
+
+    <section id="ending" class="overlay">
+      <div class="panel ending-panel">
+        <h2>Para Gaby ❤️</h2>
+        <p>Obrigado por cada sorriso, por cada abraço e por continuar caminhando ao meu lado.</p>
+        <p>Mesmo nos dias difíceis, eu quero aprender a ser verdade, calma, carinho e companhia.</p>
+        <p class="signature">Com todo o meu amor,<br><strong>Rafihx</strong></p>
+        <button id="restart-btn" class="primary">Jogar novamente</button>
+      </div>
+    </section>
+
+    <div id="mobile-controls">
+      <div class="dpad">
+        <button data-dir="up">▲</button>
+        <div><button data-dir="left">◀</button><button data-dir="down">▼</button><button data-dir="right">▶</button></div>
+      </div>
+      <button id="interact-btn">✦</button>
+    </div>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+  <script>if("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js").catch(()=>{});</script>
+</body>
+</html>
